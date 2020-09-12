@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "new-app",
-    "slug": "new-app",
+    "name": "weather-map",
+    "slug": "weather-map",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -16,11 +16,9 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios": {
-      "supportsTablet": true
-    },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": ""
   }
 }
