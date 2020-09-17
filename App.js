@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { StyleSheet, View, Alert } from 'react-native';
 import Weather from "./Weather"
 import Loading from "./Loading"
@@ -15,7 +15,7 @@ export default class App extends Component {
   state = {
     isLoaded: false
   }
-  getWeather = async(latitude, longitude) => {    
+  getWeather = async(latitude, longitude) => {
     const { 
       data : 
       {

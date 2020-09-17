@@ -5,10 +5,10 @@ import { LinearGradient } from 'expo-linear-gradient';
 import PropTypes from "prop-types";
 
 export default function Weather({temp, weather, condition, name, info}) {
-    console.log(info);
+    console.log(weather);
 
     let gradient = [
-        "#ffffff", "#eeeeee"
+        "#5C258D", "#4389A2"
     ];
     if(weather.id < 300){
         gradient = [
@@ -36,7 +36,7 @@ export default function Weather({temp, weather, condition, name, info}) {
         ];
     }else if(weather.id > 800){
         gradient = [
-            "#E6DADA", "#274046"
+            "#274046", "#E6DADA"
         ];
     }
     return(
@@ -44,7 +44,10 @@ export default function Weather({temp, weather, condition, name, info}) {
                 style={styles.container}>
             <StatusBar barStyle="light-content"/>
             <View style={styles.halfContainer}>
-                <Image source={{uri: `http://openweathermap.org/img/wn/${weather.icon}@2x.png`}} style={styles.weathericon}/>
+                
+                <Image source={{uri: `http://openweathermap.org/img/wn/${weather.icon}@2x.png`}} 
+                    style={styles.weathericon}/>
+
                 <Text style={styles.temp}>{temp}º</Text>
                 <Text style={styles.subtitle}>{name}</Text>
             </View>
@@ -56,19 +59,6 @@ export default function Weather({temp, weather, condition, name, info}) {
 }
 Weather.propTypes = {
     temp : PropTypes.number.isRequired,
-    condition : PropTypes.oneOf(
-        [
-            "Thunderstorm", 
-            "Drizzle", 
-            "Rain", 
-            "Snow", 
-            "Atmosphere", 
-            "Clear", 
-            "Clouds",
-            "Dust",
-            "Haze",
-            "Mist"
-        ]).isRequired
 };
 
 const styles = StyleSheet.create({
