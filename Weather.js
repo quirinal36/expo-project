@@ -5,7 +5,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import PropTypes from "prop-types";
 
 export default function Weather({temp, weather, condition, name, info}) {
-    console.log(weather);
+    
 
     let gradient = [
         "#5C258D", "#4389A2"
